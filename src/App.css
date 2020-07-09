@@ -1,0 +1,978 @@
+/** CSS FOR PROJECT START */
+
+/** LIGHT MODE + GENERIC CSS *********************************************************************************/
+
+/** CSS to animate sliding down */
+.react-slidedown.districtsslidedown {
+  /** overriding default react-slidedown css */
+  height: 0;
+  transition-property: none;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+/** Align divs on same line */
+.samelinedivalign {
+  display: flex;
+  flex-direction: row;
+}
+
+/** Table styling Start **************************************************************************************/
+
+/** State & District Table Header color and font-color - Overriding bootstrap classes ************************/
+.table > .thead-dark > tr > th.light {
+  background-color: rgb(184, 185, 185);
+  color: rgb(46, 46, 46);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border: 5px solid rgb(248, 245, 245);
+  border-radius: 12px;
+}
+
+/** State & District Table header hover */
+.table > .thead-dark > tr > th.light:hover {
+  background-color: rgb(161, 159, 159);
+  color: rgb(7, 94, 134);
+}
+
+/** To align actual numbers to right for proper visibility */
+.table > tbody > tr > td > div > .nondelta {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/** State level styling start ********************************************************************************/
+
+/** State Table body */
+.table > tbody.light {
+  background-color: rgba(250, 164, 164, 0.185);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: lighter;
+  color: rgb(51, 50, 49);
+}
+
+/** Bordering state table rows */
+.table > tbody.light > tr > td {
+  border: 7px solid white;
+  border-radius: 20px;
+}
+
+/** Hovering state table rows */
+.table > tbody.light > tr:hover {
+  color: rgb(179, 18, 18);
+  cursor: pointer;
+}
+
+/** CSS to show confirmed in red (state level) */
+.table > tbody.light > tr > td > div > .deltaconfirmed {
+  color: red;
+  font-size: small;
+}
+
+/** CSS to show active in orange (state level) */
+.table > tbody.light > tr > td > div > .deltaactive {
+  color: orange;
+  font-size: small;
+}
+
+/** CSS to show recovered in green (state level) */
+.table > tbody.light > tr > td > div > .deltarecovered {
+  color: green;
+  font-size: small;
+}
+
+/** CSS to show deaths in gray (state level) */
+.table > tbody.light > tr > td > div > .deltadeaths {
+  color: gray;
+  font-size: small;
+}
+
+/** State level styling end ************************************************************************************/
+
+/** District level styling start *****************************************************************************/
+
+/** District Table body */
+.table > .districtlight {
+  background-color: rgb(225, 225, 247);
+  font-weight: lighter;
+}
+
+/** Bordering district table rows */
+.table > tbody.districtlight > tr > td {
+  border: 7px solid white;
+  border-radius: 20px;
+}
+
+/** District hover rows */
+tbody.districtlight > tr:hover {
+  color: rgb(58, 58, 252);
+}
+
+/** CSS to show confirmed in red (district level) */
+.table > .districtlight > tr > td > div > .deltaconfirmeddistrict {
+  color: red;
+  font-size: small;
+}
+
+/** CSS to show active in orange (district level) */
+.table > .districtlight > tr > td > div > .deltaactivedistrict {
+  color: orange;
+  font-size: small;
+}
+
+/** CSS to show recovered in green (district level) */
+.table > .districtlight > tr > td > div > .deltarecovereddistrict {
+  color: green;
+  font-size: small;
+}
+
+/** CSS to show deaths in gray (district level) */
+.table > .districtlight > tr > td > div > .deltadeceaseddistrict {
+  color: gray;
+  font-size: small;
+}
+
+/** To align actual numbers to right for proper visibility (district level) */
+.table > .districtlight > tr > td > div > .nondeltadistrict {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/** Zonal Colors Start*/
+.table > .districtlight > tr > .Red {
+  background-color: rgb(252, 190, 190);
+}
+
+.table > .districtlight > tr > .Orange {
+  background-color: rgb(255, 228, 177);
+}
+
+.table > .districtlight > tr > .Green {
+  background-color: rgb(177, 255, 177);
+}
+
+.districtdivlight {
+  background-color: white;
+  cursor: auto;
+}
+/** Zonal Colors End */
+
+/** District level styling End *******************************************************************************/
+
+/** Table styling end ****************************************************************************************/
+
+/** Total count styling Start ********************************************************************************/
+
+/** Overall CSS for all total counts - light mode*/
+.nationalcountlight {
+  background-color: rgb(241, 241, 234);
+  color: rgb(125, 173, 247);
+  border: 5px solid white;
+  border-radius: 10px;
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.totalconfirmed {
+  color: rgb(255, 143, 143);
+  font-size: x-large;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.totalactive {
+  color: rgb(253, 191, 97);
+  font-size: x-large;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.totalrecovered {
+  color: rgb(136, 253, 136);
+  font-size: x-large;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.totaldeaths {
+  color: rgb(158, 157, 157);
+  font-size: x-large;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.totaldeltaconfirmed {
+  color: red;
+  font-size: large;
+  font-weight: bold;
+}
+
+.totaldeltarecovered {
+  color: green;
+  font-size: large;
+  font-weight: bold;
+}
+
+.totaldeltaactive {
+  color: orange;
+  font-size: large;
+  font-weight: bold;
+}
+
+.totaldeltadeaths {
+  color: gray;
+  font-size: large;
+  font-weight: bold;
+}
+/** Total count CSS end **************************************************************************************/
+
+/** CSS for Dropdown List Start ******************************************************************************/
+.mapdropdown {
+  padding-top: 8px;
+}
+
+/** Confirmed List */
+#dropdown-basic-button-confirmed {
+  font-size: large;
+  width: 170px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  color: rgb(250, 49, 49);
+  background-color: rgb(252, 208, 208);
+  border-radius: 10px;
+  transition: all 750ms;
+  border: 1px solid rgb(228, 90, 90);
+}
+
+#dropdown-basic-button-confirmed:hover {
+  background-color: rgb(252, 229, 229);
+  cursor: pointer;
+}
+
+#dropdown-basic-button-confirmed:focus {
+  box-shadow: 0 0 3px 2px #f87878;
+}
+
+/** Active List */
+#dropdown-basic-button-active {
+  font-size: large;
+  width: 170px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  color: rgb(250, 129, 49);
+  background-color: rgb(248, 220, 182);
+  border-radius: 10px;
+  transition: all 750ms;
+  border: 1px solid rgb(173, 108, 34);
+  margin-left: 0;
+  margin-right: auto;
+}
+
+#dropdown-basic-button-active:hover {
+  background-color: rgb(252, 239, 210);
+  cursor: pointer;
+}
+
+#dropdown-basic-button-active:focus {
+  box-shadow: 0 0 3px 2px #e97f05;
+}
+
+/** Recovered/Recovery Rate List */
+#dropdown-basic-button-recovered,
+#dropdown-basic-button-recovery_rate {
+  font-size: large;
+  width: 170px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  color: rgb(57, 167, 67);
+  background-color: rgb(198, 253, 197);
+  border-radius: 10px;
+  transition: all 750ms;
+  border: 1px solid rgb(83, 158, 40);
+  margin-left: 0;
+  margin-right: auto;
+}
+
+#dropdown-basic-button-recovered:hover,
+#dropdown-basic-button-recovery_rate:hover {
+  background-color: rgb(226, 255, 230);
+  cursor: pointer;
+}
+
+#dropdown-basic-button-recovered:focus,
+#dropdown-basic-button-recovery_rate:focus {
+  box-shadow: 0 0 3px 2px #2be905;
+}
+
+/** Death/Death Rate List */
+#dropdown-basic-button-deaths,
+#dropdown-basic-button-death_rate {
+  font-size: large;
+  width: 170px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  color: rgb(61, 61, 63);
+  background-color: rgb(199, 199, 199);
+  border-radius: 10px;
+  transition: all 750ms;
+  border: 1px solid rgb(117, 117, 117);
+  margin-left: 0;
+  margin-right: auto;
+}
+
+#dropdown-basic-button-deaths:hover,
+#dropdown-basic-button-death_rate:hover {
+  background-color: rgb(224, 226, 226);
+  cursor: pointer;
+}
+
+#dropdown-basic-button-deaths:focus,
+#dropdown-basic-button-death_rate:focus {
+  box-shadow: 0 0 3px 2px #7c7b7a;
+}
+
+/** Deceased List */
+#dropdown-basic-button-deceased {
+  font-size: large;
+  width: 170px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  color: rgb(61, 61, 63);
+  background-color: rgb(199, 199, 199);
+  border-radius: 10px;
+  transition: all 750ms;
+  border: 1px solid rgb(117, 117, 117);
+  margin-left: 0;
+  margin-right: auto;
+}
+
+#dropdown-basic-button-deceased:hover {
+  background-color: rgb(224, 226, 226);
+  cursor: pointer;
+}
+
+#dropdown-basic-button-deceased:focus {
+  box-shadow: 0 0 3px 2px #7c7b7a;
+}
+
+/** Zonal List */
+#dropdown-basic-button-zones {
+  font-size: large;
+  width: 170px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  color: #0c6611;
+  background-color: rgb(255, 210, 143);
+  border-radius: 10px;
+  transition: all 750ms;
+  border: 1px solid #f58013;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+#dropdown-basic-button-zones:hover {
+  background-color: rgb(255, 230, 191);
+  cursor: pointer;
+}
+
+#dropdown-basic-button-zones:focus {
+  box-shadow: 0 0 3px 2px #e97f05d5;
+}
+
+/** Menu items */
+#dropdownmenu {
+  font-size: large;
+  width: 170px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  color: rgb(18, 18, 19);
+}
+
+#dropdownmenu:hover {
+  background-color: rgb(228, 250, 255);
+  color: rgb(18, 31, 214);
+  cursor: pointer;
+}
+
+/** CSS for Dropdown List End ********************************************************************************/
+
+/** CSS for Linear Gradient Start ****************************************************************************/
+#gradientboxlight {
+  margin-right: 0;
+  margin-left: auto;
+  width: auto;
+  height: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: blue;
+  font-weight: bold;
+  font-size: inherit;
+}
+
+/** Used in gradient display */
+.fill {
+  flex: 1;
+  text-align: center;
+}
+/** CSS for Linear Gradient End ******************************************************************************/
+
+/** CSS for Back Button **************************************************************************************/
+.backbutton {
+  background-color: #c8f1fc;
+  color: #040563;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  font-size: large;
+  border-radius: 12px;
+  transition: all 750ms;
+}
+
+.backbutton:hover {
+  background-color: rgb(216, 216, 250);
+  color: #080872;
+  cursor: pointer;
+}
+
+.backbuttondiv {
+  margin-left: auto;
+  margin-right: 0;
+}
+/*************************************************************************************************************/
+
+/** CSS for map headings *************************************************************************************/
+.headinglight {
+  text-align: justify;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #06067c;
+}
+/*************************************************************************************************************/
+
+/** CSS for date/time-****************************************************************************************/
+.asonlight {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #040563;
+  font-weight: bold;
+  font-size: large;
+}
+
+.tickingclocklight {
+  font-size: medium;
+  color: rgb(12, 12, 167);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+}
+
+/*************************************************************************************************************/
+/** Total count for State ************************************************************************************/
+.statecountlight {
+  background-color: rgb(241, 241, 234);
+  color: rgb(125, 173, 247);
+  border: 5px solid white;
+  border-radius: 10px;
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.statetotalconfirmed {
+  color: rgb(255, 143, 143);
+  font-size: large;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.statetotalrecovered {
+  color: rgb(136, 253, 136);
+  font-size: large;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.statetotaldeaths {
+  color: rgb(158, 157, 157);
+  font-size: large;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+/*************************************************************************************************************/
+
+/** Error Handling Start *************************************************************************************/
+.errorheadinglight {
+  font-size: xx-large;
+  text-align: center;
+  background-color: rgb(255, 204, 204);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 25px;
+  border: 8px solid white;
+}
+
+.errorbodylight {
+  font-size: x-large;
+  text-align: center;
+  background-color: rgb(255, 244, 230);
+  color: #040650;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 25px;
+  border: 8px solid white;
+}
+
+.reloadbutton {
+  text-align: center;
+}
+/** Error Handling End ***************************************************************************************/
+
+/** Heading & Footer Start CSS *******************************************************************************/
+.headertag {
+  font-size: medium;
+  text-align: center;
+}
+
+.headerdivlight {
+  background-color: #ececec;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #040650;
+  border: 8px solid white;
+  border-radius: 18px;
+  padding: 10px;
+  text-align: center;
+}
+
+.virusicon {
+  content: url("./icons/covid19icon.png");
+  height: 40px;
+  width: 40px;
+  display: block;
+  display: inline-block;
+}
+
+.footer {
+  text-align: center;
+}
+
+.lightbody {
+  background-color: white;
+}
+
+/** Toggle icon light mode - change color to yellow */
+.toggleiconlight {
+  height: 30px;
+  width: 30px;
+  background-color: #ececec;
+  border: none;
+  background: none;
+  padding: 0;
+  color: #9e9e9e;
+}
+
+.toggleiconlight:focus {
+  outline: none;
+}
+
+.toggleicondiv {
+  float: right;
+}
+
+/** Reload button light mode */
+.reloadiconlight {
+  height: 30px;
+  width: 30px;
+  background-color: #ececec;
+  border: none;
+  background: none;
+  padding: 0;
+  color: black;
+}
+
+.reloadiconlight:focus {
+  outline: none;
+}
+
+/** API link div styling on main page-light mode*/
+.apidivlight {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: small;
+  font-weight: bold;
+  background-color: rgb(241, 241, 234);
+  border: 2px solid rgb(241, 241, 234);
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.apidivlight:hover {
+  background-color: #cecece;
+  border: 5px solid #cecece;
+}
+
+/** Link styling */
+.datasourcelinklight {
+  color: rgb(41, 76, 129);
+  text-decoration: none;
+}
+
+.datasourcelinklight:hover {
+  color: #26887b;
+  text-decoration: none;
+}
+
+/** About Page body styling - light mode */
+.aboutlight {
+  text-align: center;
+  background-color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #040650;
+  height: 100%;
+  width: 100%;
+}
+
+/** About Page components styling*/
+.aboutques {
+  width: 50%;
+  text-align: left;
+  margin: auto;
+}
+
+/** LIGHT MODE + GENERIC CSS END *****************************************************************************/
+
+/** DARK MODE START ******************************************************************************************/
+
+/** Table styling Start **************************************************************************************/
+
+/** Common to both tables ************************************************************************************/
+
+.darkbody {
+  background-color: rgb(41, 40, 40);
+}
+
+/** Header div dark mode */
+.headerdivdark {
+  background-color: #5a5959;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #d8d8d8;
+  border: 8px solid rgb(41, 40, 40);
+  border-radius: 18px;
+  padding: 10px;
+  text-align: center;
+}
+
+/** Toggle icon dark mode */
+.toggleicondark {
+  height: 30px;
+  width: 30px;
+  background-color: #5a5959;
+  border: none;
+  background: none;
+  padding: 0;
+  color: #ffe137;
+}
+
+.toggleicondark:focus {
+  outline: none;
+}
+
+/** Reload icon dark mode */
+.reloadicondark {
+  height: 30px;
+  width: 30px;
+  background-color: #5a5959;
+  border: none;
+  background: none;
+  padding: 0;
+  color: #c5c5c5;
+}
+
+.reloadicondark:focus {
+  outline: none;
+}
+
+/** Date/Time dark mode **************************************************************************************/
+.asondark {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #d3d3d3;
+  font-weight: bold;
+  font-size: large;
+}
+
+/** ticking clock dark mode */
+.tickingclockdark {
+  font-size: medium;
+  color: rgb(197, 197, 197);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: normal;
+}
+
+/** CSS for dark national count */
+.nationalcountdark {
+  background-color: #5a5959;
+  color: rgb(125, 173, 247);
+  border: 5px solid rgb(41, 40, 40);
+  border-radius: 10px;
+  font-size: larger;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+/** State & District Table Header color and font-color - Overriding bootstrap classes - dark mode ************/
+.table > .thead-dark > tr > th.dark {
+  background-color: rgb(160, 160, 160);
+  color: rgb(46, 46, 46);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border: 5px solid rgb(41, 40, 40);
+  border-radius: 12px;
+}
+
+/** State & District Table header hover */
+.table > .thead-dark > tr > th.dark:hover {
+  background-color: rgb(161, 159, 159);
+  color: rgb(7, 94, 134);
+}
+
+/** State Table body */
+.table > tbody.dark {
+  background-color: rgba(250, 164, 164, 0.185);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: lighter;
+  color: rgb(190, 190, 190);
+}
+
+/** Bordering state table rows */
+.table > tbody.dark > tr > td {
+  border: 7px solid rgb(41, 40, 40);
+  border-radius: 20px;
+}
+
+/** Hovering state table rows */
+.table > tbody.dark > tr:hover {
+  color: rgb(179, 18, 18);
+  cursor: pointer;
+}
+
+/** CSS to show confirmed in red (state level) */
+.table > tbody.dark > tr > td > div > .deltaconfirmed {
+  color: red;
+  font-size: small;
+}
+
+/** CSS to show active in orange (state level) */
+.table > tbody.dark > tr > td > div > .deltaactive {
+  color: orange;
+  font-size: small;
+}
+
+/** CSS to show recovered in green (state level) */
+.table > tbody.dark > tr > td > div > .deltarecovered {
+  color: green;
+  font-size: small;
+}
+
+/** CSS to show deaths in gray (state level) */
+.table > tbody.dark > tr > td > div > .deltadeaths {
+  color: gray;
+  font-size: small;
+}
+
+/** State level styling end ************************************************************************************/
+
+/** District level styling start *****************************************************************************/
+
+/** District Table body */
+.table > .districtdark {
+  background-color: rgb(80, 80, 80);
+  color: rgb(190, 190, 190);
+}
+
+/** Bordering district table rows */
+.table > tbody.districtdark > tr > td {
+  border: 7px solid rgb(41, 40, 40);
+  border-radius: 20px;
+}
+
+/** District hover rows */
+tbody.districtdark > tr:hover {
+  color: rgb(58, 58, 252);
+}
+
+/** CSS to show confirmed in red (district level) */
+.table > .districtdark > tr > td > div > .deltaconfirmeddistrict {
+  color: red;
+  font-size: small;
+}
+
+/** CSS to show active in orange (district level) */
+.table > .districtdark > tr > td > div > .deltaactivedistrict {
+  color: orange;
+  font-size: small;
+}
+
+/** CSS to show recovered in green (district level) */
+.table > .districtdark > tr > td > div > .deltarecovereddistrict {
+  color: green;
+  font-size: small;
+}
+
+/** CSS to show deaths in gray (district level) */
+.table > .districtdark > tr > td > div > .deltadeceaseddistrict {
+  color: gray;
+  font-size: small;
+}
+
+/** To align actual numbers to right for proper visibility (district level) */
+.table > .districtdark > tr > td > div > .nondeltadistrict {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/** Zonal Colors Start - edited for proper visibility with dark mode */
+.table > .districtdark > tr > .Red {
+  background-color: rgb(58, 26, 26);
+}
+
+.table > .districtdark > tr > .Orange {
+  background-color: rgb(61, 49, 26);
+}
+
+.table > .districtdark > tr > .Green {
+  background-color: rgb(34, 68, 34);
+}
+
+/** Zonal Colors End */
+
+/** div holding the district table - dark mode */
+.districtdivdark {
+  background-color: rgb(41, 40, 40);
+  cursor: auto;
+}
+
+/** State total count - dark mode */
+.statecountdark {
+  background-color: #5a5959;
+  color: rgb(125, 173, 247);
+  border: 5px solid rgb(41, 40, 40);
+  border-radius: 10px;
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+/** State heading dark mode */
+.headingdark {
+  text-align: justify;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(194, 192, 192);
+}
+
+/** Gradient text font color for dark mode */
+#gradientboxdark {
+  margin-right: 0;
+  margin-left: auto;
+  width: auto;
+  height: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(194, 192, 192);
+  font-weight: bold;
+  font-size: inherit;
+}
+
+/** API link div styling on main page-dark mode*/
+.apidivdark {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: small;
+  font-weight: bold;
+  background-color: #5a5959;
+  border: 2px solid #5a5959;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.apidivdark:hover {
+  background-color: #808080;
+  border: 5px solid #808080;
+}
+
+/** API Link styling dark mode */
+.datasourcelinkdark {
+  color: #a4a4b6;
+  text-decoration: none;
+}
+
+.datasourcelinkdark:hover {
+  color: #9ef3e8;
+  text-decoration: none;
+}
+
+/** About page body dark mode */
+.aboutdark {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgb(194, 192, 192);
+  background-color: rgb(41, 40, 40);
+  height: 100%;
+  width: 100%;
+}
+
+.errorheadingdark {
+  font-size: xx-large;
+  text-align: center;
+  background-color: #5a5959;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 25px;
+  border: 8px solid rgb(41, 40, 40);
+  color: rgb(194, 192, 192);
+}
+
+.errorbodydark {
+  font-size: x-large;
+  text-align: center;
+  background-color: rgb(41, 40, 40);
+  color: rgb(194, 192, 192);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-radius: 25px;
+  border: 8px solid rgb(41, 40, 40);
+}
+
+/** DARK MODE CSS END ****************************************************************************************/
+
+/* div {
+  border: 2px solid black;
+} */
+
+/** CSS END FOR PROJECT */
